@@ -1,0 +1,70 @@
+{
+  "title": "Hazel's LearnBook",
+  "author": "Hazel Wei",
+  "language": "zh-hans",
+  "plugins": [
+    "chapter-fold",
+    "codeblock-filename",
+    "github",
+    "code",
+    "page-footer-ex",
+    "back-to-top-button",
+    "alerts",
+    "emphasize",
+    "-search",
+    "-lunr",
+    "search-pro",
+    "-sharing",
+    "sharing-plus",
+    "splitter",
+    "custom-favicon",
+    "advanced-emoji",
+    "auto-scroll-table",
+    "popup",
+    "hide-element",
+    "ga",
+    "disqus",
+    "theme-comscore"
+  ],
+  "ignores": ["_book", "node_modules"],
+  "theme-default": {
+    "showLevel": true
+  },
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-127670580-1"
+    },
+    "disqus": {
+      "shortName": "hongaah"
+    },
+    "favicon": "./favicon.ico",
+    "github": {
+      "url": "https://github.com/hongaah"
+    },
+    "page-footer-ex": {
+      "copyright": "Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)",
+      "markdown": true,
+      "update_label": "该文章修订时间：",
+      "update_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "sharing": {
+      "all": [
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "linkedin",
+        "twitter",
+        "weibo",
+        "messenger",
+        "qq",
+        "qzone",
+        "viber",
+        "whatsapp"
+      ]
+    }
+  }
+}
