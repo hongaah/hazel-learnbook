@@ -10,8 +10,11 @@ My personal front-end learning record
 # install
 $ npm install -g gitbook-cli
 
-# usage with nvm
+# begin with nvm
 $ gitbook init
+
+# usage
+$ book sm
 
 # ouput
 $ gitbook build

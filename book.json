@@ -4,6 +4,11 @@
   "language": "zh-hans",
   "gitbook": ">=3.2.3",
   "description": "个人前端学习记录",
+  "ignores": ["_book", "node_modules"],
+  "theme-default": {
+    "showLevel": true
+  },
+  "disableTitleFormatting": false,
   "plugins": [
     "page-toc",
     "chapter-fold",
@@ -28,10 +33,6 @@
     "disqus",
     "theme-comscore"
   ],
-  "ignores": ["_book", "node_modules"],
-  "theme-default": {
-    "showLevel": true
-  },
   "pluginsConfig": {
     "page-toc": {
       "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
