@@ -1,4 +1,4 @@
-name: auto-generate-gitbook
+name: auto-generate-gitbook #文件名
 on: #在main分支上进行push时触发
   push:
     branches:
@@ -6,16 +6,16 @@ on: #在main分支上进行push时触发
 
 jobs:
   main-to-gh-pages:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #运行环境设置为支持的最新版ubuntu
 
     steps:
       - name: checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 #https://github.com/actions/checkout/tree/v2
         with:
           ref: main
 
       - name: install nodejs
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v1 #https://github.com/actions/setup-node/tree/v1
 
       - name: configue gitbook
         run: |

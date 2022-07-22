@@ -1,19 +1,30 @@
 # hazel-learnbook
 
-## 使用
+## 🌈 Introduction
+
+My personal front-end learning record
+
+## 🔗 Powered by Gitbook
 
 ```bash
-# 安装
+# install
 $ npm install -g gitbook-cli
 
-# 环境：要求低版本 node，可使用 nvm
-# 使用：修改 SUMMARY.md 添加目录文件
+# usage with nvm
 $ gitbook init
 
-# 输出
+# ouput
 $ gitbook build
 $ gitbook build ./ ./docs
 
-# 开发
+# development
 $ gitbook serve --port 6666
 ```
+
+## ✨ Gitbook Features
+
+- [GitBook](https://docs.github.com/cn/actions)
+- [GitBook Plugins](https://www.mapull.com/gitbook/comscore/)
+- generate a `SUMMARY.MD` via [Gitbook Summary](https://github.com/imfly/gitbook-summary)
+- Automated deployment via [Github Actions](https://docs.github.com/cn/actions)
+- choose `/docs` via [Github Pages](https://docs.github.com/cn/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)

@@ -19,7 +19,7 @@
     "-sharing",
     "sharing-plus",
     "splitter",
-    "custom-favicon",
+    "favicon",
     "advanced-emoji",
     "auto-scroll-table",
     "popup",
@@ -44,7 +44,15 @@
     "disqus": {
       "shortName": "hongaah"
     },
-    "favicon": "./favicon.ico",
+    "favicon": {
+      "shortcut": "./favicon.ico",
+      "bookmark": "./favicon.ico",
+      "appleTouch": "./favicon.ico",
+      "appleTouchMore": {
+        "120x120": "./favicon.ico",
+        "180x180": "./favicon.ico"
+      }
+    },
     "github": {
       "url": "https://github.com/hongaah"
     },
