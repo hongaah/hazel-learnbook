@@ -3,12 +3,12 @@
   "author": "Hazel Wei",
   "language": "zh-hans",
   "plugins": [
+    "page-toc",
     "chapter-fold",
     "codeblock-filename",
     "github",
     "code",
     "page-footer-ex",
-    "back-to-top-button",
     "alerts",
     "emphasize",
     "-search",
@@ -31,6 +31,11 @@
     "showLevel": true
   },
   "pluginsConfig": {
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+      "position": "before-first",
+      "showByDefault": true
+    },
     "ga": {
       "token": "UA-127670580-1"
     },
