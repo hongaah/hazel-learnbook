@@ -34,4 +34,7 @@
   .page-toc {
     display: none;
   }
+  .page-inner {
+    margin: 0 auto;
+  }
 }

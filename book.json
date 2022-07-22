@@ -2,8 +2,7 @@
   "title": "Hazel's LearnBook",
   "author": "Hazel Wei",
   "language": "zh-hans",
-  "gitbook": ">3.2.3",
-  "root": "./docs",
+  "gitbook": ">=3.2.3",
   "description": "个人前端学习记录",
   "plugins": [
     "page-toc",
