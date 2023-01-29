@@ -10,7 +10,6 @@
   },
   "plugins": [
     "page-toc",
-    "expandable-chapters-small",
     "codeblock-filename",
     "github",
     "code",
