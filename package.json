@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "My personal front-end learning record",
   "main": "index.js",
+  "scripts": {
+    "build": "book sm && gitbook build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "gitbook-plugin-codeblock-filename": "^0.0.9",
     "gitbook-plugin-advanced-emoji": "^0.2.2",
@@ -25,15 +29,13 @@
     "gitbook-plugin-theme-comscore": "^0.0.3"
   },
   "devDependencies": {},
-  "scripts": {
-    "build": "book sm && gitbook build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hongaah/hazel-learnbook.git"
   },
-  "keywords": ["frontend"],
+  "keywords": [
+    "frontend"
+  ],
   "author": "Hazel Wei",
   "license": "Apache License 2.0",
   "bugs": {
