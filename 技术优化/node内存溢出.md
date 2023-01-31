@@ -6,7 +6,7 @@ Node 进程的内存限制是有限的，当前在默认情况下，V8 在 32 �
 
 #### windows
 
-- 方式一：VSCode 工作区设置
+方式一：VSCode 工作区设置
 
 ```js: .vscode/settings.json
 
@@ -18,7 +18,7 @@ Node 进程的内存限制是有限的，当前在默认情况下，V8 在 32 �
 
 ```
 
-- 方式二：在 package.json 中设置
+方式二：在 package.json 中设置
 
 ```js: package.json
 
@@ -28,7 +28,7 @@ Node 进程的内存限制是有限的，当前在默认情况下，V8 在 32 �
 
 ```
 
-- 方式三：在终端进程中设置
+方式三：在终端进程中设置
 
 ```bash
 set NODE_OPTIONS=--max-old-space-size=<size in bits> // 单开终端
@@ -37,7 +37,7 @@ export NODE_OPTIONS="--max-old-space-size=8192" // 永久终端
 
 #### macos
 
-- macos 在.bash_profile 下加入
+macos 在.bash_profile 下加入
 
 ```sh
 export NODE_OPTIONS=--max_old_space_size=3072
@@ -47,7 +47,7 @@ export NODE_OPTIONS=--max_old_space_size=3072
 
 #### windows 和 macos
 
-- **通用的方式，使用 cross-env 跨平台设置环境变量**
+**通用的方式，使用 cross-env 跨平台设置环境变量**
 
 ```json
 npm install -D cross-env
@@ -59,7 +59,7 @@ npm install -D cross-env
 
 <https://blog.csdn.net/wuyujin1997/article/details/122869951>
 
-- 更多可参考：
+更多可参考：
 
 [详细配置](https://qa.icopy.site/questions/56982005/where-do-i-set-node-options-max-old-space-size-2048)
 
