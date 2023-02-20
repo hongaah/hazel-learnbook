@@ -30,7 +30,7 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1440px) {
   .page-toc {
     display: none;
   }
