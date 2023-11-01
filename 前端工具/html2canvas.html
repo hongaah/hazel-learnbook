@@ -1,0 +1,739 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Html 2 Canvas · Hazel's LearnBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Hazel Wei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="html2canvas.html">
+            
+                <a href="html2canvas.html">
+            
+                    
+                    Html 2 Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    技术优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../技术优化/node内存溢出.html">
+            
+                <a href="../技术优化/node内存溢出.html">
+            
+                    
+                    node内存溢出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../技术优化/vue-cli3.x项目webpack优化.html">
+            
+                <a href="../技术优化/vue-cli3.x项目webpack优化.html">
+            
+                    
+                    vue-cli3.x项目webpack优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../跨端方案/">
+            
+                <a href="../跨端方案/">
+            
+                    
+                    跨端方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../跨端方案/apicloud.html">
+            
+                <a href="../跨端方案/apicloud.html">
+            
+                    
+                    Apicloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../跨端方案/electron.html">
+            
+                <a href="../跨端方案/electron.html">
+            
+                    
+                    Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../跨端方案/flutter.html">
+            
+                <a href="../跨端方案/flutter.html">
+            
+                    
+                    Flutter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../跨端方案/uni-app.html">
+            
+                <a href="../跨端方案/uni-app.html">
+            
+                    
+                    Uni App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../跨端方案/uniapp.html">
+            
+                <a href="../跨端方案/uniapp.html">
+            
+                    
+                    Uniapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    通用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../通用工具/gitbook.html">
+            
+                <a href="../通用工具/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../通用工具/网络抓包Charles.html">
+            
+                <a href="../通用工具/网络抓包Charles.html">
+            
+                    
+                    网络抓包Charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目工程化/">
+            
+                <a href="../项目工程化/">
+            
+                    
+                    项目工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目工程化/github-action.html">
+            
+                <a href="../项目工程化/github-action.html">
+            
+                    
+                    Github Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目工程化/代码提交规范.html">
+            
+                <a href="../项目工程化/代码提交规范.html">
+            
+                    
+                    代码提交规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目工程化/代码校验.html">
+            
+                <a href="../项目工程化/代码校验.html">
+            
+                    
+                    代码校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目工程化/代码格式化.html">
+            
+                <a href="../项目工程化/代码格式化.html">
+            
+                    
+                    代码格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../项目工程化/无框架项目gulp篇.html">
+            
+                <a href="../项目工程化/无框架项目gulp篇.html">
+            
+                    
+                    无框架项目gulp篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../项目工程化/版本发布规范.html">
+            
+                <a href="../项目工程化/版本发布规范.html">
+            
+                    
+                    版本发布规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Html 2 Canvas</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="html2canvas">html2canvas</h1>
+<p>&#x8BFB;&#x53D6;&#x5DF2;&#x7ECF;&#x6E32;&#x67D3;&#x597D;&#x7684; DOM &#x5143;&#x7D20;&#x7684;&#x7ED3;&#x6784;&#x548C;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x53BB;&#x6784;&#x5EFA;&#x622A;&#x56FE;&#xFF0C;&#x5448;&#x73B0;&#x5728; canvas &#x753B;&#x5E03;&#x4E2D;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x4F7F;&#x7528;&#x573A;&#x666F;</h2>
+<p>&#x751F;&#x6210; canvas &#x4E0B;&#x8F7D;&#x56FE;&#x7247;
+&#x9875;&#x9762;&#x622A;&#x56FE;&#x6253;&#x5370;</p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>npm i html2canvas</p>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x6D77;&#x62A5; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;banner&quot;</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    ...
+    <span class="hljs-comment">&lt;!-- data-html2canvas-ignore&#xFF1A;&#x5FFD;&#x7565;&#x4E0D;&#x9700;&#x8981;&#x8F6C;&#x5316;canvas&#x7684;&#x5143;&#x7D20;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-button</span> <span class="hljs-attr">data-html2canvas-ignore</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;download&quot;</span>&gt;</span>&#x4E0B;&#x8F7D;<span class="hljs-tag">&lt;/<span class="hljs-name">el-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> html2canvas <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;html2canvas&apos;</span>
+
+download() {
+  html2canvas(<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#banner&apos;</span>), {
+    useCORS: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;CORS&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x52A0;&#x8F7D;&#x56FE;&#x50CF;</span>
+    allowTaint: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x56FE;&#x50CF;&#x6C61;&#x67D3;&#x753B;&#x5E03;</span>
+    scale: <span class="hljs-number">4</span>, <span class="hljs-comment">// &#x653E;&#x5927;&#x500D;&#x6570; &#x63D0;&#x9AD8;&#x56FE;&#x7247;&#x8D28;&#x91CF;</span>
+    width: dom.offsetWidth, <span class="hljs-comment">// &#x76F4;&#x63A5;&#x53D6;&#x5F97;&#x9700;&#x8981;&#x8F6C;&#x4E3A;&#x56FE;&#x7247;&#x7684;dom&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x9AD8;</span>
+    height: dom.offsetHeight,
+  }).then(canvas =&gt; {
+    <span class="hljs-comment">// &#x53BB;&#x9664;&#x952F;&#x9F7F;</span>
+    <span class="hljs-keyword">let</span> context = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>)
+    context.mozImageSmoothingEnabled = <span class="hljs-literal">false</span>
+    context.webkitImageSmoothingEnabled = <span class="hljs-literal">false</span>
+    context.msImageSmoothingEnabled = <span class="hljs-literal">false</span>
+    context.imageSmoothingEnabled = <span class="hljs-literal">false</span>
+    <span class="hljs-comment">// &#x52A0;&#x8F7D;&#x52A8;&#x753B;</span>
+    <span class="hljs-keyword">this</span>.posterLoading = Loading.service({
+      lock: <span class="hljs-literal">true</span>,
+      text: <span class="hljs-string">&apos;&#x4E0B;&#x8F7D;&#x6D77;&#x62A5;&#x4E2D;&#x2026;&#x2026;&apos;</span>,
+      background: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.5)&apos;</span>,
+    })
+    <span class="hljs-keyword">let</span> self = <span class="hljs-keyword">this</span>
+    <span class="hljs-keyword">let</span> url = canvas.toDataURL()
+    <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest()
+    xhr.open(<span class="hljs-string">&apos;GET&apos;</span>, url, <span class="hljs-literal">true</span>)
+    xhr.responseType = <span class="hljs-string">&apos;blob&apos;</span>
+    xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">let</span> blob = <span class="hljs-keyword">this</span>.response
+        <span class="hljs-keyword">let</span> fileName = self.posterTitle.includes(<span class="hljs-string">&apos;.&apos;</span>) ? self.posterTitle + <span class="hljs-string">&apos;.png&apos;</span> : self.posterTitle
+        <span class="hljs-keyword">if</span> (navigator.msSaveBlob == <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">const</span> link = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;a&apos;</span>)
+          <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> MouseEvent(<span class="hljs-string">&apos;click&apos;</span>)
+          link.download = fileName
+          link.href = URL.createObjectURL(blob)
+          link.dispatchEvent(event)
+        } <span class="hljs-keyword">else</span> {
+          navigator.msSaveBlob(blob, fileName)
+        }
+      }
+      setTimeout(() =&gt; {
+        self.posterLoading.close()
+      }, <span class="hljs-number">200</span>)
+    }
+    xhr.send()
+
+
+    <span class="hljs-comment">// &#x6A21;&#x62DF;&#x4E0B;&#x8F7D;</span>
+    <span class="hljs-keyword">const</span> link = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;a&apos;</span>)
+    <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> MouseEvent(<span class="hljs-string">&apos;click&apos;</span>)
+    link.download = <span class="hljs-keyword">this</span>.activityTitle
+    link.href = canvas.toDataURL()
+    link.dispatchEvent(event)
+  })
+},
+</code></pre>
+<h2 id="&#x5206;&#x8FA8;&#x7387;">&#x5206;&#x8FA8;&#x7387;</h2>
+<p>scale&#xFF1A;
+scalewindow.devicePixelRatio &#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x8BBE;&#x5907;&#x50CF;&#x7D20;&#x6BD4;</p>
+<h2 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h2>
+<ol>
+<li><p>&#x56FE;&#x7247;&#x4E0D;&#x663E;&#x793A;</p>
+<p>&#x53EF;&#x80FD;&#x539F;&#x56E0;&#xFF1A;</p>
+<ul>
+<li>html2canvas &#x6CA1;&#x6709;&#x914D;&#x7F6E; useCORS: true // &#x662F;&#x5426;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528; CORS &#x4ECE;&#x670D;&#x52A1;&#x5668;&#x52A0;&#x8F7D;&#x56FE;&#x50CF;</li>
+<li>&#x540E;&#x53F0;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x8DE8;&#x57DF;</li>
+<li><p>&#x540E;&#x53F0;&#x914D;&#x7F6E;&#x8DE8;&#x57DF;&#x4E86;&#x4F46;&#x63A7;&#x5236;&#x53F0;&#x8FD8;&#x662F;&#x663E;&#x793A;&#x8DE8;&#x57DF;&#x9519;&#x8BEF;</p>
+<p>&#x539F;&#x56E0;&#xFF1A;
+&#x6D4F;&#x89C8;&#x5668;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x9519;&#x8BEF;&#xFF0C;&#x5373;&#x91CD;&#x590D;&#x8BF7;&#x6C42;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5BFC;&#x81F4;&#x8DE8;&#x57DF;&#x9519;&#x8BEF;&#x3002;
+&#x56E0;&#x4E3A; html2canvas &#x53EA;&#x4F1A;&#x6839;&#x636E; dom &#x7ED3;&#x679C;&#x8BF7;&#x6C42;&#x5E76;&#x4E14;&#x5BF9;&#x56FE;&#x7247;&#x6765;&#x6E90;&#x6709;&#x9650;&#x5236;&#x3002;&#x5F53; dom &#x6709;&#x56FE;&#x7247;&#x5C31;&#x4F1A;&#x8BF7;&#x6C42;&#x7F51;&#x7EDC;&#xFF0C;&#x6240;&#x4EE5; canvas &#x7B2C;&#x4E8C;&#x6B21;&#x8BF7;&#x6C42;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4ECE;&#x7F13;&#x5B58;&#x83B7;&#x53D6;&#xFF0C;&#x5982;&#x679C;&#x4ECE;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;&#x7C7B;&#x4F3C;&#x672C;&#x5730;&#x8BFB;&#x53D6;&#x7167;&#x7247;&#x5219;&#x4F1A;&#x6709;&#x8DE8;&#x57DF;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x9A8C;&#x8BC1;&#xFF1A;
+&#x5F00;&#x542F;&#x63A7;&#x5236;&#x53F0;&#x7F51;&#x7EDC;&#x7684;&#x7981;&#x6B62;&#x7F13;&#x5B58;&#x9009;&#x9879;</p>
+<p>&#x89E3;&#x51B3;&#xFF1A;</p>
+<ul>
+<li>&#x52A0; cdn&#xFF0C;&#x4F46;&#x8981;&#x52A0;&#x94B1;</li>
+<li>&#x914D;&#x7F6E; CORS &#x89C4;&#x5219;&#xFF0C;&#x9644;&#x52A0;&#x76F8;&#x5173; Header&#xFF0C;&#x9009;&#x4E2D;&#x8FD4;&#x56DE; vary: origin &#x5934;&#x4EE5;&#x907F;&#x514D;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x9519;&#x4E71;&#x3002;&#x4F46;&#x662F;&#x9009;&#x4E2D;&#x540E;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#x6216; CDN &#x56DE;&#x6E90;&#x6B21;&#x6570;&#x589E;&#x52A0;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x6837;&#x5F0F;&#x9519;&#x4E71;&#xFF0C;&#x4E0E;&#x7F51;&#x9875;&#x4E0D;&#x4E00;</p>
+<p>&#x90E8;&#x5206; css &#x6837;&#x5F0F;&#x4E0D;&#x517C;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982; clac &#x8BA1;&#x7B97;&#x6837;&#x5F0F;&#x7B49;&#x7B49;</p>
+</li>
+<li><p>&#x4E0B;&#x8F7D;&#x4E0D;&#x4E86;&#x6216;&#x65E0;&#x53CD;&#x5E94;</p>
+<p>&#x53EF;&#x80FD;&#x6027;&#xFF1A;
+&#x9700;&#x8981;&#x5728;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x5B8C;&#x6BD5;&#x518D;&#x4E0B;&#x8F7D;</p>
+</li>
+<li><p>&#x62A5;&#x9519; TypeError: Failed to execute &apos;addColorStop&apos; on &apos;CanvasGradient&apos;</p>
+<p>&#x53EF;&#x80FD;&#x6027;&#xFF1A;
+&#x9875;&#x9762;&#x6E32;&#x67D3;&#x540E;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x76F8;&#x540C; canvasId &#x7684; canvas</p>
+</li>
+</ol>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://www.1024sou.com/article/209309.html" target="_blank">html2canvas &#x5B9E;&#x73B0;&#x6D4F;&#x89C8;&#x5668;&#x622A;&#x56FE;&#x7684;&#x539F;&#x7406;&#xFF08;&#x5305;&#x542B;&#x6E90;&#x7801;&#x5206;&#x6790;&#x7684;&#x901A;&#x7528;&#x65B9;&#x6CD5;&#xFF09;</a></p>
+<p><a href="https://html2canvas.hertzen.com/features" target="_blank">html2canvas &#x517C;&#x5BB9;&#x6027;</a></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; <a href="https://github.com/hongaah" target="_blank">Hazel Wei</a> all rights reserved, powered by <a href="https://www.gitbook.com/" target="_blank">Gitbook</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2023-11-01 06:39:23 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Html 2 Canvas","level":"1.2.1","depth":2,"next":{"title":"技术优化","level":"1.3","depth":1,"ref":"","articles":[{"title":"node内存溢出","level":"1.3.1","depth":2,"path":"技术优化/node内存溢出.md","ref":"技术优化/node内存溢出.md","articles":[]},{"title":"vue-cli3.x项目webpack优化","level":"1.3.2","depth":2,"path":"技术优化/vue-cli3.x项目webpack优化.md","ref":"技术优化/vue-cli3.x项目webpack优化.md","articles":[]}]},"previous":{"title":"前端工具","level":"1.2","depth":1,"ref":"","articles":[{"title":"Html 2 Canvas","level":"1.2.1","depth":2,"path":"前端工具/html2canvas.md","ref":"前端工具/html2canvas.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["page-toc","codeblock-filename","github","code","page-footer-ex","alerts","emphasize","-search","-lunr","search-pro","-sharing","sharing-plus","splitter","favicon","advanced-emoji","auto-scroll-table","popup","hide-element","ga","disqus","theme-comscore"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"hongaah"},"emphasize":{},"github":{"url":"https://github.com/hongaah"},"page-footer-ex":{"copyright":"Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文章修订时间："},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./favicon.ico","bookmark":"./favicon.ico","appleTouch":"./favicon.ico","appleTouchMore":{"120x120":"./favicon.ico","180x180":"./favicon.ico"}},"codeblock-filename":{},"theme-comscore":{},"alerts":{},"ga":{"configuration":"auto","token":"UA-127670580-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Hazel Wei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hazel's LearnBook","language":"zh-hans","gitbook":">=3.2.3","description":"个人前端学习记录","theme-default":{"showLevel":true}},"file":{"path":"前端工具/html2canvas.md","mtime":"2023-11-01T06:39:23.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-01T06:40:14.869Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

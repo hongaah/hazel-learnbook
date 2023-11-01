@@ -1,0 +1,715 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue-cli3.x项目webpack优化 · Hazel's LearnBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Hazel Wei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../跨端方案/" />
+    
+    
+    <link rel="prev" href="node内存溢出.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端工具/html2canvas.html">
+            
+                <a href="../前端工具/html2canvas.html">
+            
+                    
+                    Html 2 Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    技术优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="node内存溢出.html">
+            
+                <a href="node内存溢出.html">
+            
+                    
+                    node内存溢出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="vue-cli3.x项目webpack优化.html">
+            
+                <a href="vue-cli3.x项目webpack优化.html">
+            
+                    
+                    vue-cli3.x项目webpack优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../跨端方案/">
+            
+                <a href="../跨端方案/">
+            
+                    
+                    跨端方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../跨端方案/apicloud.html">
+            
+                <a href="../跨端方案/apicloud.html">
+            
+                    
+                    Apicloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../跨端方案/electron.html">
+            
+                <a href="../跨端方案/electron.html">
+            
+                    
+                    Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../跨端方案/flutter.html">
+            
+                <a href="../跨端方案/flutter.html">
+            
+                    
+                    Flutter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../跨端方案/uni-app.html">
+            
+                <a href="../跨端方案/uni-app.html">
+            
+                    
+                    Uni App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../跨端方案/uniapp.html">
+            
+                <a href="../跨端方案/uniapp.html">
+            
+                    
+                    Uniapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    通用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../通用工具/gitbook.html">
+            
+                <a href="../通用工具/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../通用工具/网络抓包Charles.html">
+            
+                <a href="../通用工具/网络抓包Charles.html">
+            
+                    
+                    网络抓包Charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目工程化/">
+            
+                <a href="../项目工程化/">
+            
+                    
+                    项目工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目工程化/github-action.html">
+            
+                <a href="../项目工程化/github-action.html">
+            
+                    
+                    Github Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目工程化/代码提交规范.html">
+            
+                <a href="../项目工程化/代码提交规范.html">
+            
+                    
+                    代码提交规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目工程化/代码校验.html">
+            
+                <a href="../项目工程化/代码校验.html">
+            
+                    
+                    代码校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目工程化/代码格式化.html">
+            
+                <a href="../项目工程化/代码格式化.html">
+            
+                    
+                    代码格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../项目工程化/无框架项目gulp篇.html">
+            
+                <a href="../项目工程化/无框架项目gulp篇.html">
+            
+                    
+                    无框架项目gulp篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../项目工程化/版本发布规范.html">
+            
+                <a href="../项目工程化/版本发布规范.html">
+            
+                    
+                    版本发布规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue-cli3.x项目webpack优化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="vue-cli3x-&#x9879;&#x76EE;-webpack-&#x4F18;&#x5316;">vue-cli3.x &#x9879;&#x76EE; webpack &#x4F18;&#x5316;</h1>
+<h3 id="terser-webpack-plugin">terser-webpack-plugin</h3>
+<blockquote>
+<p>&#x8BE5;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x538B;&#x7F29; JavaScrip &#x548C;&#x5728;&#x6784;&#x5EFA;&#x65F6;&#x4E00;&#x952E;&#x53BB;&#x6389;&#x8C03;&#x8BD5;&#x6253;&#x5370;&#x8BED;&#x53E5;</p>
+</blockquote>
+<ul>
+<li>&#x5B89;&#x88C5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash">$ npm install terser-webpack-plugin@3.1.0 --save-dev
+</code></pre>
+<ul>
+<li>&#x914D;&#x7F6E;&#xFF1A;</li>
+</ul>
+<div><p class="code-filename">vue.config.js</p></div>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> TerserPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;terser-webpack-plugin&apos;</span>)
+
+configureWebpack: config =&gt; {
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV === <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-keyword">return</span> {
+        optimization: {
+          minimize: <span class="hljs-literal">true</span>,
+          minimizer: [
+            <span class="hljs-keyword">new</span> TerserPlugin({
+              cache: <span class="hljs-literal">true</span>,
+              parallel: <span class="hljs-literal">true</span>,
+              sourceMap: <span class="hljs-literal">false</span>,
+              terserOptions: {
+                compress: {
+                  drop_console: <span class="hljs-literal">true</span>,
+                  drop_debugger: <span class="hljs-literal">true</span>,
+                  <span class="hljs-comment">// pure_funcs: [&apos;console.log&apos;], // &#x79FB;&#x9664;console</span>
+                },
+              },
+            }),
+          ],
+        },
+    }
+}
+</code></pre>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;
+<a href="https://v4.webpack.docschina.org/configuration/optimization/#optimization-minimizer" target="_blank">https://v4.webpack.docschina.org/configuration/optimization/#optimization-minimizer</a>
+<a href="https://github.com/webpack-contrib/terser-webpack-plugin" target="_blank">https://github.com/webpack-contrib/terser-webpack-plugin</a>
+<a href="https://github.com/terser/terser#minify-options" target="_blank">https://github.com/terser/terser#minify-options</a></p>
+<h3 id="compression-webpack-plugin">compression-webpack-plugin</h3>
+<blockquote>
+<p>&#x538B;&#x7F29;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5728; Nginx &#x5F00;&#x542F; Gzip &#x5C5E;&#x6027;&#x3002;Nginx &#x5728;&#x8BBF;&#x95EE;&#x8D44;&#x6E90;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x8D44;&#x6E90;&#x6709; gz &#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x4F1A;&#x8BF7;&#x6C42; gz &#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5B89;&#x88C5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash">$ npm install compression-webpack-plugin --save-dev
+</code></pre>
+<ul>
+<li>&#x914D;&#x7F6E;&#xFF1A;</li>
+</ul>
+<div><p class="code-filename">vue.config.js</p></div>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> CompressionPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;compression-webpack-plugin&apos;</span>) <span class="hljs-comment">// &#x5F15;&#x5165;gzip</span>
+
+configureWebpack: config =&gt; {
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV === <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-keyword">return</span> {
+        plugins: [
+          <span class="hljs-comment">// &#x6DFB;&#x52A0;gzip</span>
+          <span class="hljs-keyword">new</span> CompressionPlugin({
+            test: <span class="hljs-regexp">/\.js$|\.html$|\.css/</span>,
+            threshold: <span class="hljs-number">10240</span>,
+            deleteOriginalAssets: <span class="hljs-literal">false</span>
+          }),
+        ]
+    }
+}
+</code></pre>
+<p>&#x53C2;&#x8003;&#xFF1A;
+<a href="https://v4.webpack.js.org/plugins/compression-webpack-plugin/" target="_blank">https://v4.webpack.js.org/plugins/compression-webpack-plugin/</a></p>
+<h3 id="&#x5206;&#x6790;&#x6253;&#x5305;&#x901F;&#x5EA6;">&#x5206;&#x6790;&#x6253;&#x5305;&#x901F;&#x5EA6;</h3>
+<p><strong>speed-measure-webpack-plugin</strong></p>
+<p><a href="https://github.com/stephencookdev/speed-measure-webpack-plugin" target="_blank">https://github.com/stephencookdev/speed-measure-webpack-plugin</a></p>
+<p>&#x53EA;&#x9488;&#x5BF9; plugins</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; <a href="https://github.com/hongaah" target="_blank">Hazel Wei</a> all rights reserved, powered by <a href="https://www.gitbook.com/" target="_blank">Gitbook</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2023-11-01 06:39:23 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="node内存溢出.html" class="navigation navigation-prev " aria-label="Previous page: node内存溢出">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../跨端方案/" class="navigation navigation-next " aria-label="Next page: 跨端方案">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue-cli3.x项目webpack优化","level":"1.3.2","depth":2,"next":{"title":"跨端方案","level":"1.4","depth":1,"path":"跨端方案/README.md","ref":"跨端方案/README.md","articles":[{"title":"Apicloud","level":"1.4.1","depth":2,"path":"跨端方案/apicloud.md","ref":"跨端方案/apicloud.md","articles":[]},{"title":"Electron","level":"1.4.2","depth":2,"path":"跨端方案/electron.md","ref":"跨端方案/electron.md","articles":[]},{"title":"Flutter","level":"1.4.3","depth":2,"path":"跨端方案/flutter.md","ref":"跨端方案/flutter.md","articles":[]},{"title":"Uni App","level":"1.4.4","depth":2,"path":"跨端方案/uni-app.md","ref":"跨端方案/uni-app.md","articles":[]},{"title":"Uniapp","level":"1.4.5","depth":2,"path":"跨端方案/uniapp.md","ref":"跨端方案/uniapp.md","articles":[]}]},"previous":{"title":"node内存溢出","level":"1.3.1","depth":2,"path":"技术优化/node内存溢出.md","ref":"技术优化/node内存溢出.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","codeblock-filename","github","code","page-footer-ex","alerts","emphasize","-search","-lunr","search-pro","-sharing","sharing-plus","splitter","favicon","advanced-emoji","auto-scroll-table","popup","hide-element","ga","disqus","theme-comscore"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"hongaah"},"emphasize":{},"github":{"url":"https://github.com/hongaah"},"page-footer-ex":{"copyright":"Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文章修订时间："},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./favicon.ico","bookmark":"./favicon.ico","appleTouch":"./favicon.ico","appleTouchMore":{"120x120":"./favicon.ico","180x180":"./favicon.ico"}},"codeblock-filename":{},"theme-comscore":{},"alerts":{},"ga":{"configuration":"auto","token":"UA-127670580-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Hazel Wei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hazel's LearnBook","language":"zh-hans","gitbook":">=3.2.3","description":"个人前端学习记录","theme-default":{"showLevel":true}},"file":{"path":"技术优化/vue-cli3.x项目webpack优化.md","mtime":"2023-11-01T06:39:23.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-01T06:40:14.869Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

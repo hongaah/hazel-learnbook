@@ -1,0 +1,912 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>无框架项目gulp篇 · Hazel's LearnBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Hazel Wei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="版本发布规范.html" />
+    
+    
+    <link rel="prev" href="代码格式化.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端工具/html2canvas.html">
+            
+                <a href="../前端工具/html2canvas.html">
+            
+                    
+                    Html 2 Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    技术优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../技术优化/node内存溢出.html">
+            
+                <a href="../技术优化/node内存溢出.html">
+            
+                    
+                    node内存溢出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../技术优化/vue-cli3.x项目webpack优化.html">
+            
+                <a href="../技术优化/vue-cli3.x项目webpack优化.html">
+            
+                    
+                    vue-cli3.x项目webpack优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../跨端方案/">
+            
+                <a href="../跨端方案/">
+            
+                    
+                    跨端方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../跨端方案/apicloud.html">
+            
+                <a href="../跨端方案/apicloud.html">
+            
+                    
+                    Apicloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../跨端方案/electron.html">
+            
+                <a href="../跨端方案/electron.html">
+            
+                    
+                    Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../跨端方案/flutter.html">
+            
+                <a href="../跨端方案/flutter.html">
+            
+                    
+                    Flutter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../跨端方案/uni-app.html">
+            
+                <a href="../跨端方案/uni-app.html">
+            
+                    
+                    Uni App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../跨端方案/uniapp.html">
+            
+                <a href="../跨端方案/uniapp.html">
+            
+                    
+                    Uniapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    通用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../通用工具/gitbook.html">
+            
+                <a href="../通用工具/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../通用工具/网络抓包Charles.html">
+            
+                <a href="../通用工具/网络抓包Charles.html">
+            
+                    
+                    网络抓包Charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    项目工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="github-action.html">
+            
+                <a href="github-action.html">
+            
+                    
+                    Github Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="代码提交规范.html">
+            
+                <a href="代码提交规范.html">
+            
+                    
+                    代码提交规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="代码校验.html">
+            
+                <a href="代码校验.html">
+            
+                    
+                    代码校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="代码格式化.html">
+            
+                <a href="代码格式化.html">
+            
+                    
+                    代码格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.5" data-path="无框架项目gulp篇.html">
+            
+                <a href="无框架项目gulp篇.html">
+            
+                    
+                    无框架项目gulp篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="版本发布规范.html">
+            
+                <a href="版本发布规范.html">
+            
+                    
+                    版本发布规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >无框架项目gulp篇</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B98;&#x7F51;&#x5DE5;&#x7A0B;&#x5316;---gulp-&#x7BC7;">&#x5B98;&#x7F51;&#x5DE5;&#x7A0B;&#x5316; - gulp &#x7BC7;</h1>
+<h2 id="gulp">gulp</h2>
+<p>gulp &#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x6D41;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#xFF0C;&#x57FA;&#x4E8E; nodeJs &#x4E2D;&#x7684; stream&#xFF08;&#x6D41;&#xFF09;&#x6765;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E; grunt &#x76F4;&#x63A5;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C; IO &#x8BFB;&#x5199;&#x6765;&#x8BF4;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#x3002;
+&#x501F;&#x52A9;&#x4E8E; gulp&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x5730;&#x5B8C;&#x6210; js/sass/less/css &#x7B49;&#x6587;&#x4EF6;&#x7684;&#x7684;&#x6D4B;&#x8BD5;&#x3001;&#x68C0;&#x67E5;&#x3001;&#x5408;&#x5E76;&#x3001;&#x538B;&#x7F29;&#x3001;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x5E76;&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x5728;&#x6539;&#x52A8;&#x540E;&#x91CD;&#x590D;&#x6307;&#x5B9A;&#x7684;&#x8FD9;&#x4E9B;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>&#x8981;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x6587;&#x4EF6;&#x538B;&#x7F29;&#xFF08;cssnano uglify-js imgmin&#xFF09;</li>
+<li>babel &#x8F6C;&#x6362;</li>
+<li>&#x56FE;&#x7247;&#x8F6C; base64</li>
+<li>px2rem</li>
+<li>css &#x96EA;&#x78A7;&#x56FE;</li>
+<li>&#x81EA;&#x52A8;&#x6DFB;&#x52A0; css &#x524D;&#x7F00; autoprefixer</li>
+</ol>
+<h3 id="&#x7EC4;&#x4EF6;&#x590D;&#x7528;">&#x7EC4;&#x4EF6;&#x590D;&#x7528;</h3>
+<p>&#x4EE3;&#x7801;&#x590D;&#x7528;&#xFF1A;&#x4E3A;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x590D;&#x7528;&#x6027;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#xFF08;&#x51CF;&#x5C11;&#x9700;&#x8981;&#x53D8;&#x52A8;&#x65F6;&#x7684;&#x4FEE;&#x6539;&#x8303;&#x56F4;&#xFF09;</p>
+<p>&#x63D2;&#x4EF6;<a href="https://www.npmjs.com/package/gulp-file-include" target="_blank">gulp-file-include</a>&#xFF1A;a plugin of gulp for file include</p>
+<h4 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h4>
+<p>&#x6559;&#x7A0B;&#xFF1A;<a href="https://www.cnblogs.com/villy1029/p/6903612.html" target="_blank">HTML &#x4EE3;&#x7801;&#x590D;&#x7528;&#x5B9E;&#x8DF5;</a></p>
+<p>&#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code>|-node_modules
+|-src
+    |-include
+    |-index.html
+|-dist
+gulpfile.js
+</code></pre><div><p class="code-filename">gulpfile.js</p></div>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>)
+<span class="hljs-keyword">var</span> fileinclude = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-file-include&apos;</span>)
+gulp.task(<span class="hljs-string">&apos;fileinclude&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  gulp
+    .src(<span class="hljs-string">&apos;src/index.html&apos;</span>)
+    .pipe(fileinclude({ prefix: <span class="hljs-string">&apos;@@&apos;</span>, basepath: <span class="hljs-string">&apos;@file&apos;</span> }))
+    .pipe(gulp.dest(<span class="hljs-string">&apos;dist&apos;</span>))
+})
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;@file &#x5C31;&#x662F;&#x6307;<code>src/index.html</code>&#xFF0C;&#x5F15;&#x5165;&#x5230;&#x8BE5;&#x9875;&#x9762;&#x3002;basepath &#x5C31;&#x662F;&#x6307;&#x516C;&#x7528;&#x7EC4;&#x4EF6;&#x5B58;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<h4 id="tips">tips</h4>
+<ol>
+<li>&#x6700;&#x540E;&#x6784;&#x5EFA;&#x51FA;&#x6765;&#x7684; include &#x516C;&#x7528;&#x6587;&#x4EF6;&#x4F1A;&#x5408;&#x5E76;&#x5230; dist/index.html &#x91CC;&#x3002;&#x4E0D;&#x4F1A;&#x751F;&#x6210;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x3002;</li>
+<li>src/index.html &#x5F15;&#x5165;&#x516C;&#x5171;&#x6587;&#x4EF6;&#x65F6;&#x4ECD;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;<code>@@include(&apos;include/header.html&apos;)</code></li>
+<li>&#x4F46;&#x516C;&#x7528;&#x6587;&#x4EF6;&#x91CC;&#x8BBE;&#x7F6E;&#x94FE;&#x63A5;&#x65F6;&#x9700;&#x8981;&#x8003;&#x8651; build &#x51FA;&#x540E;&#x7684;&#x76F8;&#x5E94;&#x8DEF;&#x5F84;</li>
+<li>&#x56E0;&#x4E3A;&#x5171;&#x7528;&#x7684;&#x7EC4;&#x4EF6;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x91CC;&#x6709;&#x94FE;&#x63A5;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x9700;&#x8981;&#x5728;&#x540C;&#x4E00;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x624D;&#x4E0D;&#x4F1A;&#x94FE;&#x63A5;&#x9519;&#x8BEF;&#x3002;</li>
+</ol>
+<h3 id="css-&#x96EA;&#x78A7;&#x56FE;">css &#x96EA;&#x78A7;&#x56FE;</h3>
+<p>&#x4F7F;&#x7528;&#x96EA;&#x78A7;&#x56FE;&#xFF1A;&#x76EE;&#x7684;&#x662F;&#x51CF;&#x5C11;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#xFF0C;&#x4F46;&#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x56FE;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;&#xFF0C;&#x611F;&#x89C9;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x800C;&#x4E14;&#x96EA;&#x78A7;&#x56FE;&#x7684;&#x7EF4;&#x62A4;&#x4E5F;&#x4E0D;&#x600E;&#x4E48;&#x4FBF;&#x5229;&#xFF0C;&#x597D;&#x50CF;&#x4F7F;&#x7528;&#x7387;&#x8D8A;&#x6765;&#x8D8A;&#x4F4E;&#x4E86;&#xFF0C;&#x90FD;&#x88AB; iconfont &#x53D6;&#x4EE3;&#x4E86;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6784;&#x5EFA;&#x5DE5;&#x5177;</p>
+<p>background-image
+background-position</p>
+<h4 id="iconmoon">iconmoon</h4>
+<blockquote>
+<p>iconmoon &#x662F;&#x4E00;&#x4E2A;&#x5728;&#x7EBF;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20;&#x81EA;&#x5DF1;&#x7684; SVG &#x683C;&#x5F0F;&#x7684;&#x56FE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x5176;&#x4E2D;&#x9009;&#x62E9;&#x5DF2;&#x6709;&#x7684;&#x56FE;&#x6807;&#xFF0C; &#x5B9A;&#x5236;&#x51FA;&#x81EA;&#x5DF1;&#x7684;&#x5B57;&#x4F53;&#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>&#x5C0F;&#x56FE;&#x6807;&#x7B49;&#x7528; iconfont &#x4EE3;&#x66FF;&#xFF1A;&#x4F5C;&#x4E3A;&#x5355;&#x4E2A; DOM &#x8282;&#x70B9;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5927;&#x5C0F;&#x3001;&#x989C;&#x8272;&#x7B49;&#xFF0C;&#x975E;&#x5E38;&#x4FBF;&#x5229;&#x3002;</p>
+<p>&#x4E2A;&#x4EBA;&#x5EFA;&#x8BAE;&#x524D;&#x7AEF;&#x6765;&#x7EF4;&#x62A4;&#x8FD9;&#x4E2A;&#x5B57;&#x4F53;&#x5305;&#xFF0C;&#x6BCF;&#x6B21;&#x6709;&#x65B0;&#x589E;&#x7684;&#x56FE;&#x6807;&#xFF0C;&#x8BA9;&#x8BBE;&#x8BA1;&#x5E08;&#x7ED9;&#x6211;&#x4EEC;&#x5BF9;&#x5E94;&#x7684; svg &#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x524D;&#x7AEF;&#x81EA;&#x5DF1;&#x53BB; icomoon.io/ &#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#xFF0C;&#x5BFC;&#x5165;&#x539F;&#x6765;&#x7684; selection.json &#x6587;&#x4EF6;&#xFF0C;&#x589E;&#x91CF;&#x751F;&#x6210;&#x65B0;&#x7684; css&#xFF0C;&#x65E0;&#x6BD4;&#x65B9;&#x4FBF;&#x3002;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4E00;&#x76F4;&#x4EE5;&#x4E3A; iconfont &#x53EA;&#x80FD;&#x662F;&#x5355;&#x8272;&#x7684;&#x5462;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x8272;&#x7684;&#xFF0C;svg &#x91CC;&#x9762;&#x591A;&#x4E00;&#x4E9B; path &#x800C;&#x5DF2;&#xFF0C;&#x8BBE;&#x8BA1;&#x5E08;&#x4F1A;&#x641E;&#x5B9A;&#x7684;&#x3002;&#x751F;&#x6210;&#x5B57;&#x4F53;&#x540E;&#xFF0C;&#x524D;&#x7AEF;&#x6B63;&#x5E38;&#x5F15;&#x7528;&#x5373;&#x53EF;&#xFF08;&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x591A;&#x8272;&#x5B57;&#x4F53;&#x4F1A;&#x591A;&#x4E00;&#x4E9B;&#x6807;&#x7B7E;&#xFF09;</p>
+<p>&#x4F7F;&#x7528; base64 &#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#xFF1A;&#x6709;&#x4E9B;&#x5C0F;&#x56FE;&#x7247;&#xFF0C;&#x53EF;&#x80FD;&#x8272;&#x5F69;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x518D;&#x7528; iconfont &#x5C31;&#x6709;&#x70B9;&#x4E0D;&#x5408;&#x9002;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A; base64 &#x683C;&#x5F0F;&#xFF08;&#x4E0D;&#x80FD;&#x7F13;&#x5B58;&#xFF09;&#xFF0C;&#x76F4;&#x63A5;&#x5D4C;&#x5728; src &#x4E2D;&#xFF0C;&#x6BD4;&#x5982; webpack &#x7684; url-loader &#x8BBE;&#x7F6E; limit &#x53C2;&#x6570;&#x5373;&#x53EF;</p>
+<p><a href="https://csswizardry.com/2011/09/writing-efficient-css-selectors/" target="_blank">Writing efficient CSS selectors</a></p>
+<h3 id="&#x79C1;&#x6709;&#x524D;&#x7F00;-css">&#x79C1;&#x6709;&#x524D;&#x7F00; css</h3>
+<blockquote>
+<p>&#x91C7;&#x7528; autoprefixer &#x6216;&#x8005; prefixfree &#x7B49;&#xFF0C;&#x8BA9; CSS &#x771F;&#x6B63;&#x7684; Write once, run anywhere&#x3002;</p>
+</blockquote>
+<p>css &#x5E26;&#x524D;&#x7F00;&#x7684;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x79C1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x5E26;&#x524D;&#x7F00;&#x7684;&#x662F;&#x6807;&#x51C6;&#xFF0C;&#x52A0;&#x524D;&#x7F00;&#x662F;&#x4E3A;&#x4E86;&#x517C;&#x5BB9;</p>
+<p>PC &#x7AEF;&#xFF1A;</p>
+<p>&#x4E0D;&#x9700;&#x8981;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x5199;&#x79C1;&#x6709;&#x6709;&#x5C5E;&#x6027;&#x524D;&#x7F00;&#x4E86;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x63A7;&#x5236;&#x4F60;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x517C;&#x5BB9;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#x3002;&#x6B63;&#x786E;&#x7684;&#x59FF;&#x52BF;&#x662F;&#x5728;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#x9636;&#x6BB5;&#xFF0C;&#x7528;<code>autoprefixer</code>&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x6765;&#x4E3A;&#x7F16;&#x8BD1;&#x540E;&#x7684; css &#x81EA;&#x52A8;&#x8865;&#x5168;&#x6240;&#x9700;&#x7684;&#x524D;&#x7F00;&#x3002;&#x65E0;&#x8BBA;&#x4F60;&#x662F;&#x7528; webpack&#x3001;gulp&#x3001;grunt &#x8FD8;&#x662F; fis&#xFF0C;&#x5B83;&#x90FD;&#x80FD;&#x5B8C;&#x7F8E;&#x914D;&#x5408;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x975E;&#x5E38;&#x8BE6;&#x5C3D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63CF;&#x8FF0;&#x6BCF;&#x4E2A;&#x79C1;&#x6709;&#x6709;&#x5C5E;&#x6027;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x7684;&#x5404;&#x7248;&#x672C;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x9700;&#x8981;&#x524D;&#x7F00;&#x3002;&#x914D;&#x7F6E;&#x8BE5;&#x5DE5;&#x5177;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x8981;&#x6307;&#x660E;&#x9700;&#x8981;&#x517C;&#x5BB9;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5F88;&#x667A;&#x80FD;&#x7684;&#x6309;&#x9700;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#x4E86;&#x3002;&#x5982;&#x679C;&#x79C1;&#x6709;&#x8BED;&#x6CD5;&#x4E0E;&#x6807;&#x51C6;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x5B83;&#x4E5F;&#x80FD;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F8B;&#x5916;&#xFF0C;&#x8FD8;&#x662F;&#x8981;&#x5199;&#x524D;&#x7F00;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4F60;&#x5199;&#x7684;&#x8FD9;&#x6761; css &#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684; w3c &#x6807;&#x51C6;&#x8BED;&#x6CD5;&#x3002;</p>
+<p>&#x79FB;&#x52A8;&#x7AEF;&#xFF1A;</p>
+<p>&#x76EE;&#x524D;&#x5927;&#x90E8;&#x5206;&#x8BBE;&#x5907;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x662F;&#x57FA;&#x4E8E; webkit &#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x867D;&#x7136;&#x5176;&#x5B83;&#x5382;&#x5546;&#x7684;&#x4E5F;&#x6709;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x4E3B;&#x6D41;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x79FB;&#x52A8;&#x7AEF;&#x53EF;&#x4EE5;&#x51E0;&#x4E4E;&#x4E0D;&#x7528;&#x52A0;&#x8FD9;&#x4E9B;&#x79C1;&#x6709;&#x524D;&#x7F00;&#xFF0C;&#x4E2A;&#x522B;&#x7531;&#x4E8E;&#x7248;&#x672C;&#x8FED;&#x4EE3;&#xFF0C;&#x9700;&#x8981;&#x52A0;-webkit-&#x524D;&#x7F00;&#x517C;&#x5BB9;&#x4F4E;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C; browserslist &#x53EF;&#x4EE5;&#x5199;&#x5728; package.json &#x91CC;
+<a href="https://github.com/browserslist/browserslist#readme" target="_blank">https://github.com/browserslist/browserslist#readme</a></p>
+<pre><code class="lang-json"> <span class="hljs-string">&quot;browserslist&quot;</span>: [
+    <span class="hljs-string">&quot;last 1 version&quot;</span>,
+    <span class="hljs-string">&quot;&gt; 1%&quot;</span>,
+    <span class="hljs-string">&quot;maintained node versions&quot;</span>,
+    <span class="hljs-string">&quot;not dead&quot;</span>
+  ]
+</code></pre>
+<pre><code class="lang-js">autoprefixer({
+  browsers: [<span class="hljs-string">&apos;last 5 versions&apos;</span>, <span class="hljs-string">&apos;Android &gt;= 4.0&apos;</span>],
+  cascade: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x7F8E;&#x5316;&#x5C5E;&#x6027;&#x503C; &#x9ED8;&#x8BA4;&#xFF1A;true &#x50CF;&#x8FD9;&#x6837;&#xFF1A;</span>
+  <span class="hljs-comment">// -webkit-transform: rotate(45deg);</span>
+  <span class="hljs-comment">// transform: rotate(45deg);</span>
+  remove: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x53BB;&#x6389;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x524D;&#x7F00; &#x9ED8;&#x8BA4;&#xFF1A;true</span>
+})
+</code></pre>
+<h2 id="gulp-&#x914D;&#x7F6E;">gulp &#x914D;&#x7F6E;</h2>
+<div><p class="code-filename">gulpfile.js</p></div>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>)
+<span class="hljs-keyword">const</span> postcss = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-postcss&apos;</span>)
+<span class="hljs-keyword">const</span> sourcemaps = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-sourcemaps&apos;</span>)
+<span class="hljs-keyword">const</span> autoprefixer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;autoprefixer&apos;</span>) <span class="hljs-comment">// &#x6DFB;&#x52A0;css&#x524D;&#x7F00;</span>
+<span class="hljs-keyword">const</span> del = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;del&apos;</span>) <span class="hljs-comment">// &#x6E05;&#x7A7A;&#x76EE;&#x5F55;</span>
+<span class="hljs-keyword">const</span> concat = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-concat&apos;</span>) <span class="hljs-comment">// &#x6587;&#x4EF6;&#x5408;&#x5E76;</span>
+<span class="hljs-keyword">const</span> connect = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-connect&apos;</span>) <span class="hljs-comment">// &#x8D77;server&#x670D;&#x52A1;</span>
+<span class="hljs-keyword">const</span> cssnano = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-cssnano&apos;</span>) <span class="hljs-comment">// &#x538B;&#x7F29;css</span>
+<span class="hljs-keyword">const</span> htmlmin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-htmlmin&apos;</span>) <span class="hljs-comment">// &#x538B;&#x7F29;html</span>
+<span class="hljs-keyword">const</span> imagemin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-imagemin&apos;</span>) <span class="hljs-comment">// &#x538B;&#x7F29;&#x56FE;&#x7247;</span>
+<span class="hljs-keyword">const</span> pngquant = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;imagemin-pngquant&apos;</span>) <span class="hljs-comment">// &#x538B;&#x7F29;png&#x56FE;&#x7247;</span>
+<span class="hljs-keyword">const</span> spritesmith = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp.spritesmith&apos;</span>) <span class="hljs-comment">// &#x5408;&#x5E76;sprite&#x56FE;&#x7247;</span>
+<span class="hljs-keyword">const</span> uglify = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-uglify&apos;</span>) <span class="hljs-comment">// &#x538B;&#x7F29;js</span>
+<span class="hljs-keyword">const</span> cache = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-cache&apos;</span>) <span class="hljs-comment">// &#x7F13;&#x5B58;&#x8D44;&#x6E90;</span>
+<span class="hljs-keyword">const</span> base64 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-base64&apos;</span>) <span class="hljs-comment">// &#x8F6C;&#x6362;&#x56FE;&#x7247;</span>
+<span class="hljs-keyword">const</span> fileinclude = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-file-include&apos;</span>) <span class="hljs-comment">// &#x7EC4;&#x4EF6;&#x590D;&#x7528;</span>
+<span class="hljs-keyword">const</span> gutil = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-util&apos;</span>) <span class="hljs-comment">//&#x6392;&#x9519;&#x5C0F;&#x5DE5;&#x5177;</span>
+<span class="hljs-keyword">const</span> preprocess = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-preprocess&apos;</span>)
+
+<span class="hljs-comment">/* CLEAN: &#x6E05;&#x7A7A;dist&#x76EE;&#x5F55;
+ * ------------------------------------------------------ */</span>
+gulp.task(<span class="hljs-string">&apos;clean&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> del([<span class="hljs-string">&apos;./dist&apos;</span>])
+})
+
+<span class="hljs-comment">/* HTML: &#x538B;&#x7F29;&#xFF0C;&#x5F00;&#x53D1;&#x70ED;&#x66F4;&#x65B0;&#xFF0C;&#x751F;&#x4EA7;&#x73AF;&#x5883;
+ * ------------------------------------------------------ */</span>
+<span class="hljs-keyword">const</span> htmlMin = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp
+    .src([<span class="hljs-string">&apos;./src/*.html&apos;</span>, <span class="hljs-string">&apos;./src/include/*.html&apos;</span>])
+    .pipe(
+      fileinclude({
+        prefix: <span class="hljs-string">&apos;@@&apos;</span>,
+        basepath: <span class="hljs-string">&apos;@file&apos;</span>,
+        indent: <span class="hljs-literal">true</span>,
+      })
+    )
+    .pipe(
+      htmlmin({
+        collapseWhitespace: <span class="hljs-literal">true</span>,
+        minifyJS: <span class="hljs-literal">true</span>,
+        minifyCSS: <span class="hljs-literal">true</span>,
+        removeComments: <span class="hljs-literal">true</span>,
+      })
+    )
+    .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/&apos;</span>))
+}
+
+gulp.task(<span class="hljs-string">&apos;html:dev&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> htmlMin().pipe(connect.reload())
+})
+
+gulp.task(<span class="hljs-string">&apos;html:build&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> htmlMin()
+})
+
+<span class="hljs-comment">/* CSS&#xFF1A;&#x524D;&#x7F00;&#x3001;&#x8F6C;&#x56FE;&#x7247;&#x4E3A;base64&#x3001;&#x5408;&#x5E76;&#x91CD;&#x547D;&#x540D;&#x3001;&#x538B;&#x7F29;
+ * ------------------------------------------------------ */</span>
+<span class="hljs-keyword">const</span> cssMin = () =&gt; {
+  <span class="hljs-keyword">return</span> (
+    gulp
+      .src(<span class="hljs-string">&apos;./src/assets/css/*.css&apos;</span>)
+      .pipe(sourcemaps.init())
+      .pipe(postcss([autoprefixer()]))
+      <span class="hljs-comment">// .pipe(sourcemaps.write(&quot;.&quot;))</span>
+      .pipe(
+        base64({
+          maxImageSize: <span class="hljs-number">8</span> * <span class="hljs-number">1024</span>, <span class="hljs-comment">// &#x53EA;&#x8F6C;8kb&#x4EE5;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x4E3A;base64</span>
+        })
+      )
+      .pipe(concat(<span class="hljs-string">&apos;main.min.css&apos;</span>))
+      .pipe(cssnano())
+      .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/assets/css&apos;</span>))
+  )
+}
+
+gulp.task(<span class="hljs-string">&apos;css:dev&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> cssMin().pipe(connect.reload())
+})
+
+gulp.task(<span class="hljs-string">&apos;css:build&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> cssMin()
+})
+
+<span class="hljs-comment">/* JS&#xFF1A;&#x5408;&#x5E76;&#x538B;&#x7F29;
+ * ------------------------------------------------------ */</span>
+<span class="hljs-keyword">const</span> jsMin = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp
+    .src(<span class="hljs-string">&apos;./src/assets/js/*.js&apos;</span>)
+    .pipe(preprocess({ context: { NODE_ENV: <span class="hljs-string">&apos;production&apos;</span> } }))
+    .pipe(concat(<span class="hljs-string">&apos;main.min.js&apos;</span>))
+    .pipe(
+      uglify().on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        gutil.log(gutil.colors.red(<span class="hljs-string">&apos;[Error]&apos;</span>), err.toString())
+        <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;end&apos;</span>)
+      })
+    )
+    .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/assets/js&apos;</span>))
+}
+
+<span class="hljs-keyword">const</span> jsMinDev = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp
+    .src(<span class="hljs-string">&apos;./src/assets/js/*.js&apos;</span>)
+    .pipe(preprocess({ context: { NODE_ENV: <span class="hljs-string">&apos;development&apos;</span> } }))
+    .pipe(concat(<span class="hljs-string">&apos;main.min.js&apos;</span>))
+    .pipe(
+      uglify().on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        gutil.log(gutil.colors.red(<span class="hljs-string">&apos;[Error]&apos;</span>), err.toString())
+        <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;end&apos;</span>)
+      })
+    )
+    .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/assets/js&apos;</span>))
+}
+
+gulp.task(<span class="hljs-string">&apos;js:dev&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> jsMinDev().pipe(connect.reload())
+})
+
+gulp.task(<span class="hljs-string">&apos;js:build&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> jsMin()
+})
+
+<span class="hljs-comment">/* IMAGE&#xFF1A;&#x538B;&#x7F29;
+ * ------------------------------------------------------ */</span>
+<span class="hljs-keyword">const</span> imageMin = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp
+    .src([<span class="hljs-string">&apos;./src/assets/img/*.png&apos;</span>, <span class="hljs-string">&apos;./src/assets/img/*.jpg&apos;</span>])
+    .pipe(cache(imagemin({ progressive: <span class="hljs-literal">true</span>, use: [pngquant()] })))
+    .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/assets/img&apos;</span>))
+}
+
+<span class="hljs-comment">// &#x5408;&#x5E76;sprite&#x56FE;</span>
+<span class="hljs-keyword">const</span> spriteData = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp
+    .src(<span class="hljs-string">&apos;./src/assets/img/sprite/*.png&apos;</span>)
+    .pipe(
+      spritesmith({
+        imgName: <span class="hljs-string">&apos;img/sprite.png&apos;</span>,
+        cssName: <span class="hljs-string">&apos;css/sprite.css&apos;</span>,
+        cssFormat: <span class="hljs-string">&apos;css&apos;</span>,
+        padding: <span class="hljs-number">10</span>,
+      })
+    )
+    .pipe(gulp.dest(<span class="hljs-string">&apos;./dist/assets&apos;</span>))
+}
+
+gulp.task(<span class="hljs-string">&apos;image:dev&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> imageMin().pipe(connect.reload())
+  <span class="hljs-keyword">await</span> spriteData().pipe(connect.reload())
+})
+
+gulp.task(<span class="hljs-string">&apos;image:build&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> imageMin()
+  <span class="hljs-keyword">await</span> spriteData()
+})
+
+<span class="hljs-comment">/* DEV&#xFF1A;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x5F00;&#x53D1;&#x4EFB;&#x52A1;
+ * ------------------------------------------------------ */</span>
+<span class="hljs-comment">// &#x76D1;&#x542C;&#x6E90;&#x6587;&#x4EF6;&#x53D8;&#x5316;</span>
+gulp.task(<span class="hljs-string">&apos;watch&apos;</span>, () =&gt; {
+  gulp.watch(<span class="hljs-string">&apos;./src/assets/css/*.css&apos;</span>, gulp.series(<span class="hljs-string">&apos;css:dev&apos;</span>))
+  gulp.watch(<span class="hljs-string">&apos;./src/assets/js/*.js&apos;</span>, gulp.series(<span class="hljs-string">&apos;js:dev&apos;</span>))
+  gulp.watch([<span class="hljs-string">&apos;./src/assets/img/*.png&apos;</span>, <span class="hljs-string">&apos;./src/assets/img/*.jpg&apos;</span>], gulp.series(<span class="hljs-string">&apos;image:dev&apos;</span>))
+  gulp.watch(<span class="hljs-string">&apos;./src/**/*.html&apos;</span>, gulp.series(<span class="hljs-string">&apos;html:dev&apos;</span>))
+})
+
+<span class="hljs-comment">// &#x542F;&#x52A8;&#x670D;&#x52A1;</span>
+<span class="hljs-comment">// visit localhost:3000</span>
+gulp.task(<span class="hljs-string">&apos;server&apos;</span>, () =&gt; {
+  connect.server({
+    root: <span class="hljs-string">&apos;./dist&apos;</span>, <span class="hljs-comment">// &#x4EE5;&#x6839;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x5165;&#x53E3;</span>
+    port: <span class="hljs-number">3000</span>,
+    livereload: <span class="hljs-literal">true</span>,
+  })
+})
+
+<span class="hljs-keyword">const</span> gulpdev = () =&gt; {
+  <span class="hljs-keyword">return</span> gulp.series(gulp.parallel(<span class="hljs-string">&apos;watch&apos;</span>, <span class="hljs-string">&apos;server&apos;</span>))
+}
+
+gulp.task(<span class="hljs-string">&apos;dev&apos;</span>, gulp.series(gulp.parallel(<span class="hljs-string">&apos;watch&apos;</span>, <span class="hljs-string">&apos;server&apos;</span>)))
+
+<span class="hljs-comment">/* BUILD&#xFF1A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x6784;&#x5EFA;&#x4EFB;&#x52A1;
+ * ------------------------------------------------------ */</span>
+gulp.task(<span class="hljs-string">&apos;build&apos;</span>, gulp.series(<span class="hljs-string">&apos;clean&apos;</span>, gulp.parallel(<span class="hljs-string">&apos;html:build&apos;</span>, <span class="hljs-string">&apos;js:build&apos;</span>, <span class="hljs-string">&apos;image:build&apos;</span>, <span class="hljs-string">&apos;css:build&apos;</span>)))
+
+<span class="hljs-comment">/* TEST&#xFF1A;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x6784;&#x5EFA;&#x4EFB;&#x52A1;
+ * ------------------------------------------------------ */</span>
+gulp.task(<span class="hljs-string">&apos;test&apos;</span>, gulp.series(<span class="hljs-string">&apos;clean&apos;</span>, gulp.parallel(<span class="hljs-string">&apos;html:build&apos;</span>, <span class="hljs-string">&apos;js:dev&apos;</span>, <span class="hljs-string">&apos;image:build&apos;</span>, <span class="hljs-string">&apos;css:build&apos;</span>)))
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; <a href="https://github.com/hongaah" target="_blank">Hazel Wei</a> all rights reserved, powered by <a href="https://www.gitbook.com/" target="_blank">Gitbook</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2023-11-01 06:39:23 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="代码格式化.html" class="navigation navigation-prev " aria-label="Previous page: 代码格式化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="版本发布规范.html" class="navigation navigation-next " aria-label="Next page: 版本发布规范">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"无框架项目gulp篇","level":"1.6.5","depth":2,"next":{"title":"版本发布规范","level":"1.6.6","depth":2,"path":"项目工程化/版本发布规范.md","ref":"项目工程化/版本发布规范.md","articles":[]},"previous":{"title":"代码格式化","level":"1.6.4","depth":2,"path":"项目工程化/代码格式化.md","ref":"项目工程化/代码格式化.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","codeblock-filename","github","code","page-footer-ex","alerts","emphasize","-search","-lunr","search-pro","-sharing","sharing-plus","splitter","favicon","advanced-emoji","auto-scroll-table","popup","hide-element","ga","disqus","theme-comscore"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"hongaah"},"emphasize":{},"github":{"url":"https://github.com/hongaah"},"page-footer-ex":{"copyright":"Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文章修订时间："},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./favicon.ico","bookmark":"./favicon.ico","appleTouch":"./favicon.ico","appleTouchMore":{"120x120":"./favicon.ico","180x180":"./favicon.ico"}},"codeblock-filename":{},"theme-comscore":{},"alerts":{},"ga":{"configuration":"auto","token":"UA-127670580-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Hazel Wei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hazel's LearnBook","language":"zh-hans","gitbook":">=3.2.3","description":"个人前端学习记录","theme-default":{"showLevel":true}},"file":{"path":"项目工程化/无框架项目gulp篇.md","mtime":"2023-11-01T06:39:23.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-01T06:40:14.869Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
