@@ -2,10 +2,13 @@
   "name": "hazel-learnbook",
   "version": "1.0.0",
   "description": "My personal front-end learning record",
-  "main": "index.js",
+  "main": "index.js", 
   "scripts": {
     "build": "book sm && gitbook build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.24.1"
   },
   "dependencies": {
     "gitbook-plugin-codeblock-filename": "^0.0.9",
