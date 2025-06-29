@@ -1,10 +1,16 @@
 # Hazel's LearnBook
 
 - 前端工具
+  * [Fetch](前端工具/fetch.md)
   * [Html 2 Canvas](前端工具/html2canvas.md)
+  * [h函数](前端工具/h函数.md)
+  * [Postmessage](前端工具/postmessage.md)
+  * [Tsx](前端工具/tsx.md)
+  * [Vite](前端工具/vite.md)
 - 技术优化
   * [node内存溢出](技术优化/node内存溢出.md)
   * [vue-cli3.x项目webpack优化](技术优化/vue-cli3.x项目webpack优化.md)
+  * [Web Worker](技术优化/web-worker.md)
 - [跨端方案](跨端方案/README.md)
   * [Apicloud](跨端方案/apicloud.md)
   * [Electron](跨端方案/electron.md)
@@ -13,10 +19,14 @@
   * [Uni App](跨端方案/uni-app.md)
   * [Uniapp](跨端方案/uniapp.md)
 - 通用工具
+  * [Curl](通用工具/curl.md)
   * [Gitbook](通用工具/gitbook.md)
   * [网络抓包Charles](通用工具/网络抓包Charles.md)
 - [项目工程化](项目工程化/README.md)
   * [Github Action](项目工程化/github-action.md)
+  * [Monorepo](项目工程化/monorepo.md)
+  * [rollup打包node](项目工程化/rollup打包node.md)
+  * [vite打包node](项目工程化/vite打包node.md)
   * [代码提交规范](项目工程化/代码提交规范.md)
   * [代码校验](项目工程化/代码校验.md)
   * [代码格式化](项目工程化/代码格式化.md)
