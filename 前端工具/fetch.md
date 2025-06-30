@@ -1,7 +1,5 @@
 # fetch
 
-[Fetch API 教程](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
-
 ## features
 
 fetch() 的功能与 XMLHttpRequest 基本相同，但有三个主要的差异
@@ -9,7 +7,7 @@ fetch() 的功能与 XMLHttpRequest 基本相同，但有三个主要的差异
 - promise
 - 模块化设计，API 分散在多个对象上（Response、Request、Headers）
 - 数据流（stream 对象）处理数据，可以分块读取，有利于提高网站性能表现，减少内容占用；XMLHTTPRequest 对象不支持数据流，所有的数据必须放在缓存里，不支持分块读取，必须等待全部拿到后，再一次性吐出来
-- 请求是否成功标识（只有网络错误，或者无法连接时，fetch()才会报错，其他情况都不会报错，而是认为请求成功）
+- 请求是否成功标识（只有网络错误，或者无法连接时，fetch() 才会报错，其他情况都不会报错，而是认为请求成功）
 - 捕获错误 try catch
 
 ### 模块化对象
@@ -43,7 +41,7 @@ const response2 = response.clone()
 
 #### Headers 对象
 
-Response 对象还有一个Response.headers属性，指向一个 Headers 对象，对应 HTTP 回应的所有标头。
+Response 对象还有一个 Response.headers 属性，指向一个 Headers 对象，对应 HTTP 回应的所有标头。
 
 ```js
 const headers = response.headers
@@ -81,7 +79,7 @@ while(true) {
 
 #### AbortController 对象
 
-取消fetch()请求需要使用 AbortController 对象
+取消 fetch() 请求需要使用 AbortController 对象
 
 ```js
 // 
@@ -150,6 +148,7 @@ params = blob
 5. get 请求的参数转对象传递
 
 直接传：❎ Failed to execute 'fetch' on 'Window': Request with GET/HEAD method cannot have body
+
 借助 Qs：✅
 
 ```js
@@ -165,6 +164,8 @@ fetch(`/sharp-compress-gif/compression?${Qs.stringify(params)}`, {
 ```
 
 ## usage
+
+[Fetch API 教程](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
 
 ```js
 try {

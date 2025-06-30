@@ -1,6 +1,7 @@
 # tsx
 
 SFC：Vue 单文件组件
+
 TSX：TypeScript 文件，包含 JavaScript XML（JSX）
 
 ```ts
@@ -31,7 +32,8 @@ classNames('foo', 'bar') // => 'foo bar'
 ## CSS Modules
 
 css module 把 css 作为模块引入到 js 中，是一种技术流的组织css代码的策略，它将为css提供默认的局部作用域。
-css module 对 css 文件命名由要求，必须在后缀名前面是module，例如xxx.module.css、xxx.module.less、xxx.module.scss。
+
+css module 对 css 文件命名有要求，必须在后缀名前面是module，例如xxx.module.css、xxx.module.less、xxx.module.scss。
 
 ```js :vite.config.ts
 css: {
@@ -64,8 +66,6 @@ export default TsxDemo
 
 css module 会在编译的时候自动把类名加上一个哈希字符串，而使用 global 声明的 class 不会在编译的时候被加上哈希字符串。
 
-会编译成哈希字符串的类名需要用引用的方式，global 声明则不能用。
-
 ```scss :index.module.scss
 /** 形式一 */
 .demo-normal {
@@ -91,6 +91,8 @@ css module 会在编译的时候自动把类名加上一个哈希字符串，而
   background-color: red !important;
 }
 ```
+
+类名使用引用的方式会被编译成哈希字符串的，global 声明则不能用引用的方式。
 
 ```tsx
 // 形式一

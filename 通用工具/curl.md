@@ -1,10 +1,6 @@
 # curl
 
-Client Url
-
-CURL 是一个利用 URL 语法在命令行下工作的文件传输工具
-
-[curl 的用法指南](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
+[CURL (Client Url)](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html) 是一个利用 URL 语法在命令行下工作的文件传输工具。
 
 ## 应用
 
