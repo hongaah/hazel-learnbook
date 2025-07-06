@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Monorepo · Hazel's LearnBook</title>
+        <title>模块联邦Module-Federation · Hazel's LearnBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -104,10 +104,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="qiankun.html" />
+    <link rel="next" href="版本发布规范.html" />
     
     
-    <link rel="prev" href="github-action.html" />
+    <link rel="prev" href="无框架项目gulp篇.html" />
     
 
     
@@ -490,7 +490,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.2" data-path="monorepo.html">
+        <li class="chapter " data-level="1.6.2" data-path="monorepo.html">
             
                 <a href="monorepo.html">
             
@@ -594,7 +594,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="模块联邦Module-Federation.html">
+        <li class="chapter active" data-level="1.6.10" data-path="模块联邦Module-Federation.html">
             
                 <a href="模块联邦Module-Federation.html">
             
@@ -655,7 +655,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Monorepo</a>
+        <a href=".." >模块联邦Module-Federation</a>
     </h1>
 </div>
 
@@ -670,101 +670,91 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="monorepo-&#x65B9;&#x6848;">monorepo &#x65B9;&#x6848;</h1>
-<ul>
-<li>pnpm workspaces</li>
-<li>yarn workspaces</li>
-<li>lerna + yarn workspaces</li>
-</ul>
-<h2 id="pnpm-workspaces">pnpm workspaces</h2>
-<p>&#x1F330;&#xFF1A;</p>
-<ul>
-<li>hazel-plus(ui)</li>
-<li>&#x4E24;&#x4E2A;&#x5B98;&#x7F51;&#x91CD;&#x6784;&#x5408;&#x5E76;&#xFF08;nuxt2.17&#xFF09;</li>
-</ul>
-<h3 id="&#x4E24;&#x4E2A;&#x5B98;&#x7F51;&#x91CD;&#x6784;&#x5408;&#x5E76;&#xFF08;nuxt217&#xFF09;">&#x4E24;&#x4E2A;&#x5B98;&#x7F51;&#x91CD;&#x6784;&#x5408;&#x5E76;&#xFF08;nuxt2.17&#xFF09;</h3>
-<p>pnpm &#x914D;&#x7F6E;&#xFF0C;&#x4F7F;&#x7528;&#x65E7; npm &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x7684;&#x65B9;&#x5F0F;</p>
-<div><p class="code-filename">.npmrc</p></div>
-<pre><code class="lang-json">shamefully-hoist=<span class="hljs-literal">true</span>
-auto-install-peers=<span class="hljs-literal">true</span>
-strict-peer-dependencies=<span class="hljs-literal">false</span>
-</code></pre>
-<p>&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x522B;&#x540D; alias &#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x5F15;&#x7528;&#x8DEF;&#x5F84;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> { resolve } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>
+                                <h1 id="&#x6A21;&#x5757;&#x8054;&#x90A6;-module-federation">&#x6A21;&#x5757;&#x8054;&#x90A6; Module Federation</h1>
+<p>Module Federation &#x662F; webpack5 &#x63D0;&#x4F9B;&#x7684;&#x7528;&#x4E8E;&#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x6A21;&#x5757;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x53EA;&#x8981;&#x7528; ModuleFederationPlugin &#x58F0;&#x660E; exposes &#x7684;&#x6A21;&#x5757;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x91CC;&#x7528; ModuleFederationPlugin &#x58F0;&#x660E; remotes &#x5BFC;&#x5165;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x522B;&#x7684;&#x5E94;&#x7528;&#x7684;&#x6A21;&#x5757;&#x4E86;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x5B83;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x53EB;&#x6A21;&#x5757;&#x8054;&#x90A6;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x5916;&#xFF0C;&#x5E93;&#x6A21;&#x5757;&#x4E5F;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x8981;&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x7528; import()&#x6765;&#x5F02;&#x6B65;&#x5F15;&#x5165;&#x3002;&#x5355;&#x72EC;&#x5F15;&#x5165;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x7528; React.lazy(() =&gt; import(&apos;xx/yy&apos;)) &#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6216;&#x8005;&#x628A;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7528; import() &#x6765;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x8981;&#x6CE8;&#x610F;&#x8981;&#x56FA;&#x5B9A; output.publicPath&#xFF0C;&#x4E0D;&#x7136;&#x5F15;&#x5165;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#x8DEF;&#x5F84;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+<div><p class="code-filename">webpack.config.js aaa &#x7684; webpack &#x914D;&#x7F6E;</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">// visit aaa: localhost:3000</span>
+<span class="hljs-keyword">const</span> { ModuleFederationPlugin } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>).container;
 
-<span class="hljs-keyword">const</span> config = {
-  alias: {
-    <span class="hljs-string">&apos;@&apos;</span>: resolve(__dirname, <span class="hljs-string">&apos;../..&apos;</span>),
-  },
-}
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    output: {
+      <span class="hljs-comment">// webpack uses `publicPath` to determine where the app is being served from.</span>
+      <span class="hljs-comment">// It requires a trailing slash, or the file assets will get an incorrect path.</span>
+      <span class="hljs-comment">// We inferred the &quot;public path&quot; (such as / or /my-project) from homepage.</span>
+      <span class="hljs-comment">// publicPath: paths.publicUrlOrPath,</span>
+      publicPath: <span class="hljs-string">&apos;http://localhost:3000/&apos;</span>,
+    },
+    plugins: [
+      <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+        name: <span class="hljs-string">&apos;aaa_app&apos;</span>,
+        filename: <span class="hljs-string">&apos;aaaEntry.js&apos;</span>,
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A; name &#x4E3A; aaa_app &#x7684;&#x5171;&#x4EAB;&#x5305;&#x3002;&#x8FD9;&#x4E2A;&#x5171;&#x4EAB;&#x5305; exposes &#x66B4;&#x9732;&#x51FA;&#x4E86; Button &#x8FD9;&#x4E2A;&#x5171;&#x4EAB;&#x6A21;&#x5757;&#x3002;&#x5B83;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x662F; aaaEntry.js&#x3002;</span>
+        <span class="hljs-comment">// &#x91CD;&#x8DD1;&#x670D;&#x52A1;&#x540E;&#x4F1A;&#x770B;&#x5230;&#x9875;&#x9762;&#x8BF7;&#x6C42;&#x4E86; aaaEntry.js &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A; aaa_app &#x7684;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x8BF4; webpack &#x628A;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x3002;&#x8FD9;&#x6837;&#x522B;&#x7684; webpack &#x5E94;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;</span>
+        exposes: {
+          <span class="hljs-string">&apos;./Button&apos;</span>: <span class="hljs-string">&apos;./src/Button/index.jsx&apos;</span>,
+        },
+        remotes: {
+          <span class="hljs-string">&apos;bbb-app&apos;</span>: <span class="hljs-string">&apos;bbb_app@http://localhost:3001/bbbEntry.js&apos;</span>,
+        }
+        <span class="hljs-comment">// &#x9664;&#x4E86;&#x5BFC;&#x51FA;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x5916;&#xFF0C;&#x5E93;&#x7684;&#x6A21;&#x5757;&#x4E5F;&#x53EF;&#x4EE5;&#x5171;&#x7528;&#xFF0C;&#x6BD4;&#x5982; react&#x3001;react-dom &#x8FD9;&#x79CD;&#x5E93;&#x3002;</span>
+        shared: {
+          react: {
+            singleton: <span class="hljs-literal">true</span>,
+          },
+          <span class="hljs-string">&apos;react-dom&apos;</span>: {
+            singleton: <span class="hljs-literal">true</span>,
+          }
+        },
+      }),
+    ],
+  };
+};
 </code></pre>
-<p>&#x914D;&#x7F6E; ts &#x7C7B;&#x578B;&#x89E3;&#x6790;&#x8DEF;&#x5F84;</p>
-<div><p class="code-filename">tsconfig.json</p></div>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;extends&quot;</span>: <span class="hljs-string">&quot;./tsconfig.base.json&quot;</span>,
-  <span class="hljs-string">&quot;compilerOptions&quot;</span>: {
-    <span class="hljs-string">&quot;baseUrl&quot;</span>: <span class="hljs-string">&quot;../../&quot;</span>,
-    <span class="hljs-string">&quot;paths&quot;</span>: {
-      <span class="hljs-string">&quot;@/*&quot;</span>: [<span class="hljs-string">&quot;./*&quot;</span>]
-    }
-  }
-}
-</code></pre>
-<h3 id="pnpm-workspaces-&#x9879;&#x76EE;&#x90E8;&#x7F72;">pnpm workspaces &#x9879;&#x76EE;&#x90E8;&#x7F72;</h3>
-<p>&#x7ECF;&#x5E38;&#x4F1A;&#x6709;&#x5F02;&#x5E38;&#x62A5;&#x9519;&#xFF0C;&#x5982;&#x672C;&#x5730;&#x7F16;&#x8BD1;&#x6784;&#x5EFA;&#x6B63;&#x5E38;&#xFF0C;&#x53D1;&#x7EBF;&#x4E0A;&#x90E8;&#x7F72;&#x5219;&#x62A5;&#x9519;&#xFF0C;&#x5751;&#x70B9;&#x53EF;&#x80FD;&#x662F;&#x4F9D;&#x8D56;&#x95EE;&#x9898;&#xFF0C;lock &#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x9501;&#x597D;&#xFF0C;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x88AB;&#x5347;&#x7EA7;&#x4E86;&#x7136;&#x540E;&#x5BFC;&#x81F4;&#x95EE;&#x9898;</p>
-<p><a href="https://pnpm.io/zh/workspaces" target="_blank">workspaces</a>
-<a href="https://zhuanlan.zhihu.com/p/422740629" target="_blank">Quick Start&#xFF1A;&#x7528; pnpm &#x7BA1;&#x7406; Monorepo &#x9879;&#x76EE;</a></p>
-<h4 id="link-&#x673A;&#x5236;">link &#x673A;&#x5236;</h4>
-<p>&#x5728; monorepo &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x89E3;&#x51B3; package &#x95F4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x6BD4;&#x5982; @panda/tools &#x4F1A;&#x88AB; @panda/server &#x548C; @panda/web &#x4F9D;&#x8D56;&#x3002;</p>
-<pre><code class="lang-json"><span class="hljs-string">&quot;dependencies&quot;</span>: {
-  <span class="hljs-string">&quot;@panda/tools&quot;</span>: <span class="hljs-string">&quot;workspace:^1.0.0&quot;</span>, <span class="hljs-comment">// &#x901A;&#x8FC7; workspace &#x4E3A;&#x672C;&#x5730;&#x5F15;&#x7528;</span>
-},
-</code></pre>
-<p>&#x901A;&#x8FC7;&#x8F6F;&#x94FE;&#x63A5;&#x5F15;&#x7528;&#x4E86; tools package&#xFF0C;&#x53EF;&#x4EE5;&#x5728; web &#x9879;&#x76EE;&#x4E0B;&#x7684; node_modules &#x770B;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x5DF2;&#x7ECF;&#x63D0;&#x5347;&#x4E86;&#x3002;</p>
-<h4 id="&#x53D1;&#x5E03;-workspace-&#x5305;">&#x53D1;&#x5E03; workspace &#x5305;</h4>
-<p>&#x5F53;&#x8FD9;&#x6837;&#x7684;&#x5DE5;&#x5177;&#x5305;&#x88AB;&#x53D1;&#x5E03;&#x5230;&#x5E73;&#x53F0;&#x540E;&#xFF0C;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x5176;&#x4E2D;&#x7684; workspace &#x5462;&#xFF1F;</p>
-<p>&#x9700;&#x8981; workspace &#x5305;&#x6253;&#x5305;&#x5230;&#x5F52;&#x6863;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>pnpm pack</code> &#x6216; <code>pnpm publish</code> &#x4E4B;&#x7C7B;&#x7684;&#x53D1;&#x5E03;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x52A8;&#x6001;&#x66FF;&#x6362;&#x8FD9;&#x4E9B; workspace &#x4F9D;&#x8D56;&#xFF0C;&#x628A;&#x57FA;&#x4E8E;&#x7684; workspace &#x7684;&#x4F9D;&#x8D56;&#x53D8;&#x6210;&#x5916;&#x90E8;&#x4F9D;&#x8D56;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x548C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5BF9;&#x4F9D;&#x8D56;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x662F;&#x7528; pnpm &#x7684;&#x547D;&#x4EE4;&#x624D;&#x80FD;&#x8D77;&#x6548;</p>
-<h2 id="yarn-workspaces">yarn workspaces</h2>
-<p>package.json &#x914D;&#x7F6E;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
-  <span class="hljs-string">&quot;workspaces&quot;</span>: [<span class="hljs-string">&quot;apps/*&quot;</span>],
-  <span class="hljs-string">&quot;scripts&quot;</span>: {
-    <span class="hljs-string">&quot;xxx:dev&quot;</span>: <span class="hljs-string">&quot;yarn workspace xxx run dev&quot;</span>
-  }
-}
-</code></pre>
-<h2 id="lerna--yarn-workspaces">lerna + yarn workspaces</h2>
-<p><a href="https://blog.csdn.net/frontend_frank/article/details/115344129" target="_blank">https://blog.csdn.net/frontend_frank/article/details/115344129</a></p>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x5168;&#x5C40;&#x5B89;&#x88C5;&#xFF0C;lerna &#x6D4B;&#x8BD5;&#x7248;&#x672C;&#x4E3A; 5.6.2</span>
-$ npm install -g lerna@5.6.2
+<div><p class="code-filename">webpack.config.js bbb &#x7684; webpack &#x914D;&#x7F6E;</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">// visit bbb: localhost:3001</span>
+<span class="hljs-comment">// &#x5F15;&#x5165; aaa &#x7684; Button &#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">const</span> { ModuleFederationPlugin } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>).container;
 
-<span class="hljs-comment"># &#x7A7A;&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316; lerna &#x9879;&#x76EE;</span>
-$ lerna init
-
-<span class="hljs-comment"># &#x6267;&#x884C; apps &#x9879;&#x76EE;&#x4E0B; xxx-a &#x9879;&#x76EE;&#x7684; script &#x6307;&#x4EE4; dev&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x52A0; --stream&#xFF0C;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EA;&#x4F1A;&#x63D0;&#x793A;&#x6700;&#x540E;&#x4E00;&#x53E5; run dev &#x5C31;&#x4EC0;&#x4E48;&#x4FE1;&#x606F;&#x90FD;&#x4E0D;&#x4F1A;&#x62A5;</span>
-$ lerna run dev --scope xxx<span class="hljs-_">-a</span> --stream
-
-<span class="hljs-comment"># &#x67E5;&#x770B; lerna &#x6307;&#x4EE4;</span>
-$ lerna run --help
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    publicPath: <span class="hljs-string">&apos;http://localhost:3001/&apos;</span>,
+    plugins: [
+      <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+        name: <span class="hljs-string">&apos;bbb_app&apos;</span>,
+        filename: <span class="hljs-string">&apos;bbbEntry.js&apos;</span>,
+        <span class="hljs-comment">// &#x5BFC;&#x51FA; bbb &#x5E94;&#x7528;&#x7684; link &#x7EC4;&#x4EF6;</span>
+        exposes: {
+          <span class="hljs-string">&apos;./Link&apos;</span>: <span class="hljs-string">&apos;./src/Link/index.jsx&apos;</span>
+        },
+        <span class="hljs-comment">// &#x5F15;&#x5165;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; remotes &#x6CE8;&#x518C;&#xFF0C;&#x8FD9;&#x6BB5;&#x914D;&#x7F6E;&#x5C31;&#x662F;&#x6CE8;&#x518C;&#x4E86;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x7684; Module&#xFF0C;&#x540D;&#x5B57;&#x53EB; aaa-app&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x6765;&#x81EA; http://localhost:3000/aaaEntry.js &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x7684; aaa_app &#x53D8;&#x91CF;&#x3002;</span>
+        remotes: {
+          <span class="hljs-string">&apos;aaa-app&apos;</span>: <span class="hljs-string">&apos;aaa_app@http://localhost:3000/aaaEntry.js&apos;</span>
+        },
+        shared: {
+          react: {
+            singleton: <span class="hljs-literal">true</span>,
+          },
+          <span class="hljs-string">&apos;react-dom&apos;</span>: {
+            singleton: <span class="hljs-literal">true</span>,
+          }
+        },
+      }),
+    ],
+  };
+};
 </code></pre>
-<p>&#x5982;&#x679C;&#x5728;&#x65E7;&#x9879;&#x76EE;&#x91CD;&#x6784;&#x6210; lerna monorepo &#x9879;&#x76EE;&#x5219;&#x624B;&#x52A8;&#x52A0; lerna.json &#x6587;&#x4EF6;</p>
-<div><p class="code-filename">lerna.json</p></div>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;node_modules/lerna/schemas/lerna-schema.json&quot;</span>,
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;independent&quot;</span>, <span class="hljs-comment">// lerna&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x96C6;&#x4E2D;&#x7248;&#x672C;&#xFF0C;&#x6240;&#x6709;&#x7684;package&#x5171;&#x7528;&#x4E00;&#x4E2A;version,&#x5982;&#x679C;&#x9700;&#x8981;packages&#x4E0B;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5757; &#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E;Independent&#x6A21;&#x5F0F;</span>
-  <span class="hljs-string">&quot;packages&quot;</span>: [<span class="hljs-string">&quot;apps/*&quot;</span>],
-  <span class="hljs-string">&quot;useWorkspaces&quot;</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">&quot;npmClient&quot;</span>: <span class="hljs-string">&quot;yarn&quot;</span>,
-  <span class="hljs-string">&quot;useNx&quot;</span>: <span class="hljs-literal">false</span>
-}
+<div><p class="code-filename">app.jsx bbb &#x4F7F;&#x7528; aaa &#x7684; Button</p></div>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x56E0;&#x4E3A;&#x662F;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x7528; React.lazy &#x5305;&#x88F9;&#xFF0C;&#x5177;&#x4F53;&#x53D6;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x903B;&#x8F91;&#x5C31;&#x662F;&#x7528; webpack &#x63D0;&#x4F9B;&#x7684; import() &#x6765;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x3002;</span>
+<span class="hljs-keyword">const</span> RemoteButton = React.lazy(() =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;aaa-app/Button&apos;</span>));
 </code></pre>
-<h2 id="turborepo">turborepo</h2>
-<p><a href="https://turbo.build/" target="_blank">https://turbo.build/</a></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; <a href="https://github.com/hongaah" target="_blank">Hazel Wei</a> all rights reserved, powered by <a href="https://www.gitbook.com/" target="_blank">Gitbook</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2025-06-30 23:42:45 </span> </footer>
+<h2 id="&#x6A21;&#x5757;&#x7EA7;&#x5FAE;&#x524D;&#x7AEF;-module-federation">&#x6A21;&#x5757;&#x7EA7;&#x5FAE;&#x524D;&#x7AEF; Module Federation</h2>
+<p>Module Federation &#x662F;&#x5929;&#x751F;&#x7684;&#x6A21;&#x5757;&#x7EA7;&#x5FAE;&#x524D;&#x7AEF;&#xFF0C;&#x5B83;&#x548C; qiankun &#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x5F02;&#x6B65;&#x53BB;&#x67D0;&#x4E2A;&#x5730;&#x5740;&#x4E0B;&#x8F7D;&#x5B83;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x8DD1;&#x8D77;&#x6765;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x4E00;&#x4E2A;&#x662F;&#x5E94;&#x7528;&#x7EA7;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6A21;&#x5757;&#x7EA7;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5FAE;&#x524D;&#x7AEF;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x4E0D;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x91CC;&#x590D;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x4E48;&#xFF1F;&#x53EA;&#x4E0D;&#x8FC7;&#x4E00;&#x822C;&#x662F;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x5171;&#x4EAB;&#xFF0C;&#x6BD4;&#x5982; qiankun &#x662F;&#x5728;&#x4E3B;&#x5E94;&#x7528;&#x91CC;&#x6CE8;&#x518C;&#x5FAE;&#x5E94;&#x7528;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5FAE;&#x5E94;&#x7528;&#x91CC;&#x5199;&#x4E00;&#x4E0B;&#x52A0;&#x8F7D;&#x3001;&#x5378;&#x8F7D;&#x7B49;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8DEF;&#x7531;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x5FAE;&#x5E94;&#x7528;&#x5E76;&#x6267;&#x884C;&#x5B83;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x6765;&#x6FC0;&#x6D3B;&#x5B83;&#x3002;&#x5FAE;&#x524D;&#x7AEF;&#x4E5F;&#x5C31;&#x662F;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x5E94;&#x7528;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x800C; Module Federation &#x5462;&#xFF1F;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x91CC;&#x6CE8;&#x518C;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x6A21;&#x5757;&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#xFF0C;webpack &#x4F1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x5BF9;&#x5E94;&#x7684; chunk&#xFF0C;&#x62FF;&#x5230;&#x5BF9;&#x5E94;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5171;&#x4EAB;&#x7684;&#x6A21;&#x5757;&#x3002;&#x8FD9;&#x4E2A;&#x548C;&#x5E94;&#x7528;&#x7EA7;&#x522B;&#x7684;&#x5FAE;&#x524D;&#x7AEF;&#x4E0D;&#x662F;&#x4E00;&#x6837;&#x7684;&#x6D41;&#x7A0B;&#x4E48;&#xFF1F;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x5E76;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; <a href="https://github.com/hongaah" target="_blank">Hazel Wei</a> all rights reserved, powered by <a href="https://www.gitbook.com/" target="_blank">Gitbook</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2025-07-06 17:23:27 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -792,12 +782,12 @@ $ lerna run --help
 
             
                 
-                <a href="github-action.html" class="navigation navigation-prev " aria-label="Previous page: Github Action">
+                <a href="无框架项目gulp篇.html" class="navigation navigation-prev " aria-label="Previous page: 无框架项目gulp篇">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="qiankun.html" class="navigation navigation-next " aria-label="Next page: Qiankun">
+                <a href="版本发布规范.html" class="navigation navigation-next " aria-label="Next page: 版本发布规范">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -808,7 +798,7 @@ $ lerna run --help
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monorepo","level":"1.6.2","depth":2,"next":{"title":"Qiankun","level":"1.6.3","depth":2,"path":"项目工程化/qiankun.md","ref":"项目工程化/qiankun.md","articles":[]},"previous":{"title":"Github Action","level":"1.6.1","depth":2,"path":"项目工程化/github-action.md","ref":"项目工程化/github-action.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","codeblock-filename","github","code","page-footer-ex","alerts","emphasize","-search","-lunr","search-pro","-sharing","sharing-plus","splitter","favicon","advanced-emoji","auto-scroll-table","popup","hide-element","ga","disqus","theme-comscore"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"hongaah"},"emphasize":{},"github":{"url":"https://github.com/hongaah"},"page-footer-ex":{"copyright":"Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文章修订时间："},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./favicon.ico","bookmark":"./favicon.ico","appleTouch":"./favicon.ico","appleTouchMore":{"120x120":"./favicon.ico","180x180":"./favicon.ico"}},"codeblock-filename":{},"theme-comscore":{},"alerts":{},"ga":{"configuration":"auto","token":"UA-127670580-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Hazel Wei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hazel's LearnBook","language":"zh-hans","gitbook":">=3.2.3","description":"个人前端学习记录","theme-default":{"showLevel":true}},"file":{"path":"项目工程化/monorepo.md","mtime":"2025-06-30T15:42:45.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-06T09:35:27.855Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模块联邦Module-Federation","level":"1.6.10","depth":2,"next":{"title":"版本发布规范","level":"1.6.11","depth":2,"path":"项目工程化/版本发布规范.md","ref":"项目工程化/版本发布规范.md","articles":[]},"previous":{"title":"无框架项目gulp篇","level":"1.6.9","depth":2,"path":"项目工程化/无框架项目gulp篇.md","ref":"项目工程化/无框架项目gulp篇.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","codeblock-filename","github","code","page-footer-ex","alerts","emphasize","-search","-lunr","search-pro","-sharing","sharing-plus","splitter","favicon","advanced-emoji","auto-scroll-table","popup","hide-element","ga","disqus","theme-comscore"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"hongaah"},"emphasize":{},"github":{"url":"https://github.com/hongaah"},"page-footer-ex":{"copyright":"Copyright © [Hazel Wei](https://github.com/hongaah) all rights reserved, powered by [Gitbook](https://www.gitbook.com/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文章修订时间："},"splitter":{},"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./favicon.ico","bookmark":"./favicon.ico","appleTouch":"./favicon.ico","appleTouchMore":{"120x120":"./favicon.ico","180x180":"./favicon.ico"}},"codeblock-filename":{},"theme-comscore":{},"alerts":{},"ga":{"configuration":"auto","token":"UA-127670580-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Hazel Wei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hazel's LearnBook","language":"zh-hans","gitbook":">=3.2.3","description":"个人前端学习记录","theme-default":{"showLevel":true}},"file":{"path":"项目工程化/模块联邦Module-Federation.md","mtime":"2025-07-06T09:23:27.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-06T09:35:27.855Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
