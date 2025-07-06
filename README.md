@@ -21,7 +21,6 @@ My personal front-end learning record
   * [Apicloud](跨端方案/apicloud.md)
   * [Electron](跨端方案/electron.md)
   * [Flutter](跨端方案/flutter.md)
-  * [Mpvue](跨端方案/mpvue.md)
   * [Uni App](跨端方案/uni-app.md)
   * [Uniapp](跨端方案/uniapp.md)
 - 通用工具
@@ -31,12 +30,14 @@ My personal front-end learning record
 - [项目工程化](项目工程化/README.md)
   * [Github Action](项目工程化/github-action.md)
   * [Monorepo](项目工程化/monorepo.md)
+  * [Qiankun](项目工程化/qiankun.md)
   * [Rollup Pack Node](项目工程化/rollup-pack-node.md)
   * [Vite Pack Node](项目工程化/vite-pack-node.md)
   * [代码提交规范](项目工程化/代码提交规范.md)
   * [代码校验](项目工程化/代码校验.md)
   * [代码格式化](项目工程化/代码格式化.md)
   * [无框架项目gulp篇](项目工程化/无框架项目gulp篇.md)
+  * [模块联邦Module-Federation](项目工程化/模块联邦Module-Federation.md)
   * [版本发布规范](项目工程化/版本发布规范.md)
 
 ## 🔗 Powered by Gitbook

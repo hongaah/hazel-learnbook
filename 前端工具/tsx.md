@@ -4,7 +4,9 @@ SFC：Vue 单文件组件
 
 TSX：TypeScript 文件，包含 JavaScript XML（JSX）
 
-```ts
+## 配置
+
+```ts :vite.config.ts
 // pnpm install @vitejs/plugin-vue-jsx -D
 
 import { defineConfig } from "vite"
@@ -24,10 +26,6 @@ export default defineConfig({
   },
 })
 ```
-
-## [classnames](https://www.npmjs.com/package/classnames)
-
-classNames('foo', 'bar') // => 'foo bar'
 
 ## CSS Modules
 
@@ -134,3 +132,7 @@ css module 会在编译的时候自动把类名加上一个哈希字符串，而
   }
 }
 ```
+
+## [classnames](https://www.npmjs.com/package/classnames)
+
+classNames('foo', 'bar') // => 'foo bar'
